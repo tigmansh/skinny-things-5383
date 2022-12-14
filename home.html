@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    *{
+      box-sizing:border-box;
+      margin: 0px;
+      padding: 0px;
+    }
+
+/* Slideshow container */
+.slideshow-container {
+  width:100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  /* width: 100%; */
+  text-align:left;
+  margin-bottom: 180px;
+  margin-left: 875px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text button{
+    margin-top: 10px;
+    padding: 7px;
+}
+
+.slideshow-container:hover{
+    cursor: pointer;
+}
+
+.text2 {
+  color:black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  /* width: 100%; */
+  text-align:left;
+  margin-bottom: 180px;
+  margin-left: 875px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text2 button{
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    padding: 7px;
+}
+
+.text3 {
+  color:#f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  /* width: 100%; */
+  text-align:left;
+  margin-bottom: 180px;
+  margin-left: 875px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text3 button{
+    width: 30%;
+    margin-top: 10px;
+    padding: 7px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name:fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade{
+  from {opacity: .4}
+  to {opacity: 1}
+}
+nav{
+    background-color: black;
+    /* line-height: normal; */
+    width: 100%;
+}
+nav img{
+    width: 22%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+#anchorDiv{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 2%;
+    margin-top: -3%;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+</style>
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+
+    <nav>
+        
+      <img src="https://i.ibb.co/g3rCDZ4/logo-removebg-preview.png" alt="">
+        <div id="anchorDiv">
+           <div>
+             <a class="dropDown" href="">Brands</a>
+           </div> 
+            <div>
+             <a class="dropDown" href="">Holiday<br>Shop</a>
+           </div>
+           <div>
+             <a class="dropDown" href="">Browse<br>By</a>
+          </div>
+          <div>
+             <a class="dropDown" href="">Bestsellers</a>
+          </div>
+          <div>
+             <a class="dropDown" href="">Skin<br>Care</a>
+          </div>
+          <div>
+             <a class="dropDown" href="">Makeup</a>
+          </div>
+          <div>
+             <a class="dropDown" href="">Hair<br>Care</a>
+          </div>
+          <div>
+             <a class="dropDown" href="">Bath &<br>Body</a>
+          </div>
+          <div>
+             <a class="dropDown" href="">Fragrance<br>Shop</a>
+          </div>
+          <div>
+             <a class="dropDown" href="">Tools &<br>Devices</a>
+          </div>
+          <div>
+             <a class="dropDown" href="">Gifts &<br>Sets</a>
+          </div>
+          <div>
+             <a class="dropDown" href="">BeautyFIX</a>
+          </div>
+          <div>
+             <a class="dropDown" href="">Offers</a>
+          </div>
+          <div>
+             <a class="dropDown" href="">New</a>
+          </div>
+          <div>
+             <a href="">Skin<br>101</a>
+          </div>
+        </div>    
+
+    </nav>
+    <!-- Slideshow container -->
+    
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="https://static.thcdn.com/images/xlarge/webp/widgets/208-us/42/original-1031-STDCRE-43056-DS-WC-November-Batching-Shot-40-HomePage_1920x700-073042.jpg" style="width:100%">
+      <div class="text">
+         <h1>Up to 25% Off Gift Sets</h1>
+         <p>Sleigh your list & save on limited-edition sets, featuring the most-coveted<br>formulas in skin, hair & beauty-just in time for the holidays. <br>
+         *Ends 12/15. Participating products only. 
+         </p>
+         <button>SHOP NOW</button>
+       </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="https://static.thcdn.com/images/xlarge/webp/widgets/208-us/44/original-1116-STDCRE-43990-CM-DS-Q4-Batching-1920x700-061844.jpeg" style="width:100%">
+      <div class="text2">
+        <p>Now at THE SKIN EMPORIUM</p>
+        <h1>Introducing: ISDIN</h1>
+        <p>Discover Barcelona-born, advanced skin care formulas with innovative <br> textures for a practical & sensory experience.</p>
+        <button>SHOP NOW</button>
+      </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="https://static.thcdn.com/images/xlarge/webp/widgets/208-us/01/original-1116-STDCRE-43990-CM-DS-Q4-Batching-1920x700-075901.jpeg" style="width:100%">
+      <div class="text3">
+        <h1>The Ultimate Gift Guide</h1>
+        <p>Our curated roundup of 50 merry-making & glow-giving skin,hair & beauty<br>gifts for everyone on your list.</p>
+        <button>SHOP NOW</button> <button>READ MORE</button>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="https://static.thcdn.com/images/xlarge/webp/widgets/208-us/51/original-1117-STDCRE-43638-DS-AH-Klarna-Assets-HomePage_1920x700_copy_3-074351.jpg" style="width:100%">
+      </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+</body>
+
+<script>
+    
+    let slideIndex = 0;
+ showSlides();
+
+ function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+   // Change image every 3 seconds
+  setTimeout(showSlides, 3000); 
+ }
+</script>
+</html>

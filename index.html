@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        /* Form Styles */
+
+
+/* Form Title */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Label */
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Form Input */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Form Button */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+div{
+  width:95%;
+  padding-top: 15px;
+  margin: auto;
+}
+h4{
+  color: red;
+  font-size: small;
+}
+
+body{
+  background-image: url("https://i.ibb.co/1LPcwmW/login.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+form {
+  width: 300px;
+  margin-left:75%;
+  margin-top: 12.5%;
+  padding: 30px;
+  padding-right: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color:#fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:small;
+  /* opacity: 1; */
+}
+</style>
+</head>
+<body>
+    <!-- Login Form -->
+<form id="login-form">
+  <h1>Welcome Back <br>We Missed You !</h1>
+  <label for="username">E-mail:</label>
+  <input type="email" id="username" name="username" placeholder="E-mail...">
+  <h4 id="user"></h4>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" placeholder="Password...">
+  <h4 id="pass"></h4>
+  <button type="submit">Login</button>
+  <div>
+    Don't Have an Account ?<a href="http://127.0.0.1:5500/signup.html">  Sign-up now</a>
+ </div>
+</form>
+
+</body>
+<script>
+    // Get the login form
+
+ const loginForm = document.getElementById('login-form');
+
+ let data = JSON.parse(localStorage.getItem("data"))||[]
+
+ let user = document.getElementById("user");
+ let pass = document.getElementById("pass");
+
+// Handle the login form submit event
+loginForm.addEventListener('submit', (e) => {
+  // Prevent the default form submission
+  e.preventDefault();
+
+  // Get the username and password values
+  const username = loginForm['username'].value;
+  const password = loginForm['password'].value;
+
+  // Loop over the local storage items
+  for(let i=0; i<data.length; i++){
+    if (username===data[i].username && password===data[i].password){
+      window.location = "http://127.0.0.1:5500/home.html";
+      // alert("logged in");
+      break;
+    }
+    else if (username !== data[i].username){
+      user.innerText = "Wrong Username";
+    }
+    else if(password !== data[i].password){
+      pass.innerText = "Wrong Password";
+    }
+    else{
+      user.innerText = "Wrong Username";
+      pass.innerText = "Wrong Password";
+    }
+  }
+});
+
+</script>
+</html>
