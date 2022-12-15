@@ -67,7 +67,37 @@ form {
   background-color:#fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size:small;
-  /* opacity: 1; */
+}
+
+/* For Medium Screen Size */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  form {
+  width: 250px;
+  margin-left:70%;
+  margin-top: 12.5%;
+  padding: 15px;
+  padding-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color:#fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:small;
+}
+}
+/* For Small Screen Size */
+@media screen and (min-width: 325px) and (max-width: 767px){
+  form {
+  width: 250px;
+  margin-left:70%;
+  margin-top: 12.5%;
+  padding: 15px;
+  padding-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color:#fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:small;
+}
 }
 </style>
 </head>
@@ -83,7 +113,7 @@ form {
   <h4 id="pass"></h4>
   <button type="submit">Login</button>
   <div>
-    Don't Have an Account ?<a href="http://127.0.0.1:5500/signup.html">  Sign-up now</a>
+    Don't Have an Account ?<a href="/signup.html">  Sign-up now</a>
  </div>
 </form>
 
@@ -110,7 +140,7 @@ loginForm.addEventListener('submit', (e) => {
   // Loop over the local storage items
   for(let i=0; i<data.length; i++){
     if (username===data[i].username && password===data[i].password){
-      window.location = "http://127.0.0.1:5500/home.html";
+      window.location = "/home.html";
       // alert("logged in");
       break;
     }

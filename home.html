@@ -150,7 +150,6 @@
 }
 nav{
     background-color: black;
-    /* line-height: normal; */
     width: 100%;
 }
 nav img{
@@ -166,13 +165,105 @@ nav img{
     margin-right: 10%;
     padding-bottom: 2%;
     margin-top: -3%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
 }
 
 a{
     text-decoration: none;
     color: #fff;
 }
+#main{
+  display: flex;
+}
+#search{
+   width: 25%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+    padding: 1%;
+    margin-top:2%;
+    height: 40px;
+    
+}
+#main{
+  display: flex;
+}
 
+#main div img{
+  width: 10%;
+  height: 23%;
+ margin-left: 0.5%;
+ margin-top: 6%;
+ background-color: #fff;
+}
+
+#logout{
+  /* display: flex;
+  justify-content: center; */
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  width: 10%;
+  height: 10%;
+  position:absolute;
+  left: 83%;
+  top: 3%;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+  cursor: pointer;
+  /* margin-top: 3%; */
+}
+#cart{
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  width: 10%;
+  height: 10%;
+  position:absolute;
+  left: 90%;
+  top: 3%;
+  cursor: pointer;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+}
+#counter{
+  text-align: center;
+  color: black;
+  position:absolute;
+  left: 93%;
+  top: 5%;
+  cursor: pointer;
+  border-radius:20px;
+  width: 1%;
+  background-color: white;
+}
+
+#casualText{
+  text-align: center;
+  margin-top: 1%;
+  font-size: large;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#off{
+position: absolute;
+left: 8%;
+width: 35%;
+height: 60%;
+}
+#bigger{
+  display: flex;
+}
+.carousel{
+  display: flex;
+}
+.carousel img{
+position: absolute;
+left:50%;
+width: 25%;
+height:40%;
+
+}
 </style>
 </head>
 
@@ -181,8 +272,20 @@ a{
     <!-- Nav bar -->
 
     <nav>
-        
-      <img src="https://i.ibb.co/g3rCDZ4/logo-removebg-preview.png" alt="">
+      <div id="main">
+      <img src="https://i.ibb.co/bsY7DKX/logo-removebg-preview.png" alt="">
+        <input type="text" id="search" placeholder="Search for a product or brand...">
+        <div>
+         <img id="searchbutton" src="https://www.freeiconspng.com/uploads/flat-search-find-icon-13.png" alt="">
+        </div>
+        <a href="/index.html">
+          <button id="logout">Logout</button>
+        </a>
+        <a href="/cart.html">
+          <button id="cart">Cart</button>
+        </a>
+        <span id="counter">0</span>
+      </div>
         <div id="anchorDiv">
            <div>
              <a class="dropDown" href="">Brands</a>
@@ -289,10 +392,40 @@ a{
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
   </div>
+
+  <div id="casualText">
+    <p>20% off SkinMedica <br>
+    Save on formulas created by dermatologists & rooted in science.</p>
+  </div>
+  <div id="bigger">
+    <div>
+      <img id="off" src="https://static.thcdn.com/images/medium/webp/widgets/208-us/49/676x556-Shot16-V1-115749.jpeg" alt="">
+    </div>
+    <div class="carousel" data-flickity='{ "groupCells": true }'>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg" alt=""></div>
+    </div>    
+  </div>
 </body>
 
 <script>
-    
+    let searchButton = document.getElementById("searchbutton");
+    searchButton.addEventListener("click",()=>{
+      
+    })
     let slideIndex = 0;
  showSlides();
 
@@ -308,5 +441,6 @@ a{
    // Change image every 3 seconds
   setTimeout(showSlides, 3000); 
  }
+
 </script>
 </html>
