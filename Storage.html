@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--  This Is For Making API Only... -->
+    <form action="" id="form">
+        <input type="text" id="image" placeholder="img">
+        <input type="text" id="productName" placeholder="product">
+        <input type="text" id="category" placeholder="cat">
+        <input type="text" id="price" placeholder="price">
+        <input type="number" id="rating" placeholder="rating">
+        <input type="submit" id="submit">
+    </form>
+</body>
+
+<script>
+    let storage = JSON.parse(localStorage.getItem("MyAPI"))||[];
+
+    let abc = document.getElementById("form");
+
+    abc.addEventListener("submit",(e)=>{
+        
+        e.preventDefault();
+        let obj = {
+            image: document.getElementById("image").value,
+            product: document.getElementById("productName").value,
+            category: document.getElementById("category").value,
+            price: document.getElementById("price").value,
+            rating: document.getElementById("rating").value,
+        }
+        
+        storage.push(obj);
+
+        localStorage.setItem("MyAPI",JSON.stringify(storage));
+    })
+</script>
+</html>
