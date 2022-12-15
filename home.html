@@ -150,7 +150,6 @@
 }
 nav{
     background-color: black;
-    /* line-height: normal; */
     width: 100%;
 }
 nav img{
@@ -166,13 +165,173 @@ nav img{
     margin-right: 10%;
     padding-bottom: 2%;
     margin-top: -3%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
 }
 
 a{
     text-decoration: none;
     color: #fff;
 }
+#main{
+  display: flex;
+}
+#search{
+   width: 25%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+    padding: 1%;
+    margin-top:2%;
+    height: 40px;
+    
+}
+#main{
+  display: flex;
+}
 
+#main div img{
+  width: 10%;
+  height: 23%;
+ margin-left: 0.5%;
+ margin-top: 6%;
+ background-color: #fff;
+}
+
+#logout{
+  /* display: flex;
+  justify-content: center; */
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  width: 10%;
+  height: 10%;
+  position:absolute;
+  left: 83%;
+  top: 3%;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+  cursor: pointer;
+  /* margin-top: 3%; */
+}
+#cart{
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  width: 10%;
+  height: 10%;
+  position:absolute;
+  left: 90%;
+  top: 3%;
+  cursor: pointer;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+}
+#counter{
+  text-align: center;
+  color: black;
+  position:absolute;
+  left: 93%;
+  top: 5%;
+  cursor: pointer;
+  border-radius:20px;
+  width: 1%;
+  background-color: white;
+}
+
+#casualText{
+  text-align: center;
+  margin-top: 1%;
+  font-size: large;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#off{
+width: 35%;
+height: 60%;
+margin-top: 5%;
+}
+#onn{
+  width: 35%;
+  height: 437px;
+  margin-top: 5%;
+}
+#ddd{
+  display: flex;
+  justify-content: space-evenly;
+}
+#bigger{
+  display: flex;
+}
+.carousel{
+  display: flex;
+}
+.carousel img{
+position: absolute;
+left:50%;
+width: 25%;
+height:40%;
+}
+.secondNav{
+  display: flex;
+}
+
+#Navsecond{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.secondNav p{
+  padding-top: 11px;
+}
+#thirdnav{
+  text-align: center;
+  background-color: grey;
+  position: color;
+  /* background: 0px 0px; */
+  height: 51.9875px;
+  width: 1519.2px;
+  border: 0px solid #999999;
+  padding: 16px 8px 16px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.992px;
+  text-decoration: none solid rgb(51, 51, 51);
+  word-spacing: 0px;
+  font-family: "lato regular, Helvetica, Arial";
+}
+#shopByCategory{
+  text-align: center;
+  margin-top: 50px;
+  font-size: large;
+  height: 100px;
+  font-family: "lato regular, Helvetica, Arial";
+}
+
+#shopByCategory2{
+  display: flex;
+  margin-left: 4%;
+  justify-content: space-evenly;
+}
+
+#shopByCategory2 img{
+  height: 196px;
+  width: 196px;
+}
+
+#afterBestseller{
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 40px;
+  margin-left: 5%;
+}
+
+#afterBestseller img{
+  height: 348px;
+  width: 423px;
+}
 </style>
 </head>
 
@@ -181,8 +340,20 @@ a{
     <!-- Nav bar -->
 
     <nav>
-        
-      <img src="https://i.ibb.co/g3rCDZ4/logo-removebg-preview.png" alt="">
+      <div id="main">
+      <img src="https://i.ibb.co/bsY7DKX/logo-removebg-preview.png" alt="">
+        <input type="text" id="search" placeholder="Search for a product or brand...">
+        <div>
+         <img id="searchbutton" src="https://www.freeiconspng.com/uploads/flat-search-find-icon-13.png" alt="">
+        </div>
+        <a href="/index.html">
+          <button id="logout">Logout</button>
+        </a>
+        <a href="/cart.html">
+          <button id="cart">Cart</button>
+        </a>
+        <span id="counter">0</span>
+      </div>
         <div id="anchorDiv">
            <div>
              <a class="dropDown" href="">Brands</a>
@@ -232,8 +403,44 @@ a{
         </div>    
 
     </nav>
+    <div id="Navsecond">
+    <div class="secondNav">
+      <svg width="40" height="40">
+        <path d="M17.874 26a4.002 4.002 0 0 1-7.748 0H9.047V12.022H24v1.999L28 14l3 5 .023 7.028-1.153-.01A4.002 4.002 0 0 1 22.126 26h-4.252zM23 16v4h6v-1l-2-3h-4zm-9 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm12 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" class="responsiveUsp_icon_svg-fill"/>
+      </svg> <p>FREE US Shipping $50+</p>
+    </div>
+    <div class="secondNav">
+      <svg width="40" height="40">
+        <path d="M21.45 28c3.23 0 5.85-2.686 5.85-6s-2.62-6-5.85-6c-3.23 0-5.85 2.686-5.85 6s2.62 6 5.85 6zm0 2c-4.308 0-7.8-3.582-7.8-8s3.492-8 7.8-8 7.8 3.582 7.8 8-3.492 8-7.8 8z" class="responsiveUsp_icon_svg-fill"/>
+        <path d="M15.732 26.782c-3.43-.84-5.982-4.006-5.982-7.782 0-4.418 3.492-8 7.8-8 2.814 0 5.28 1.529 6.652 3.82l-1.662 1.047C21.482 14.098 19.61 13 17.55 13c-3.23 0-5.85 2.686-5.85 6 0 2.792 1.875 5.197 4.485 5.836l-.453 1.946zM22.425 18h1.95l-3.9 8h-1.95z" class="responsiveUsp_icon_svg-fill"/>
+      </svg> <p>New Customers Save 15%*</p>
+    </div>
+    <div class="secondNav">
+      <img src="https://www.svgrepo.com/show/327539/sparkles.svg" alt="" style="width: 40px;padding-right: 10px;"><p>The Skin Emporium Rewards</p>
+    </div>
+    <div class="secondNav">
+      <img src="https://image.shutterstock.com/image-vector/clock-icon-trendy-flat-style-260nw-674379841.jpg" alt="" style="width: 40px;">
+      <p>Ask The Esthetician</p>
+    </div>
+    <div class="secondNav">
+      <svg width="25" height="40" viewBox="0 0 24 24">
+        <path fill="#333" fill-rule="evenodd" d="M18,2 L18,22 L6,22 L6,2 L18,2 Z M12,19 C11.4477153,19 11,19.4477153 11,20 C11,20.5522847 11.4477153,21 12,21 C12.5522847,21 13,20.5522847 13,20 C13,19.4477153 12.5522847,19 12,19 Z M16,5 L8,5 L8,18 L16,18 L16,5 Z M14,3 L10,3 L10,4 L14,4 L14,3 Z" class="responsiveUsp_icon_svg-fill"/>
+      </svg>
+      <p>Download Our App</p>
+    </div>
+    <div class="secondNav">
+      <svg width="40" height="40" viewBox="-8 -8 40 40">
+        <path d="M8.58123535,17.3666782 L8.57536766,17.3724713 L4,12.8552083 L5.38991989,11.4829397 L9.21683579,15.2612558 L19.6100801,5 L21,6.37226867 L9.22270348,18 L8.58123535,17.3666782 Z" class="responsiveUsp_icon_svg-fill"/>
+      </svg>
+      <p>Refer a Friend, Get $15</p>
+    </div>
+  </div>
+
+  <div id="thirdnav">
+    <p>Enjoy 20% off SkinMedica.SHOP NOW</p>
+  </div>
     <!-- Slideshow container -->
-    
+    <div id="body">
   <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
@@ -289,10 +496,110 @@ a{
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
   </div>
+
+  <div id="casualText">
+    <p>20% off SkinMedica <br>
+    Save on formulas created by dermatologists & rooted in science.</p>
+  </div>
+ 
+    <div id="ddd">
+      <img id="off" src="https://static.thcdn.com/images/medium/webp/widgets/208-us/49/676x556-Shot16-V1-115749.jpeg" alt="">
+      <img id="onn" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beauty-products-1603140461.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*" alt="">
+    </div>
+
+    <div id="shopByCategory">
+      <p>Shop By Category</p>
+    </div>
+
+    <div id="shopByCategory2">
+      <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/20/DS_Round_Nav_-_Untitled_Page_%287%29-052520.png" alt="">
+      </div>
+      <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/36/DS_Round_Nav_-_Untitled_Page_%2833%29-085536.png" alt="">
+      </div>
+      <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/32/DS_Round_Nav_-_Untitled_Page_%289%29-052632.png" alt="">
+      </div>
+      <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/03/DS_Round_Nav_-_Untitled_Page_%2810%29-052703.png" alt="">
+      </div>
+      <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/49/DS_Round_Nav_-_Untitled_Page_%2813%29-053649.png" alt="">
+      </div>
+      <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/36/DS_Round_Nav_-_Untitled_Page_%2825%29-063536.png" alt="">
+      </div>
+    </div>
+
+    <div id="afterBestseller">
+      <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/39/1116-STDCRE-43990-CM-DS-Q4-Batching-676x556-063539.jpeg" alt="">
+        <p>New from Fekkai</p>
+        <p>Three soon-to-be faves to smooth, volumize & hold.</p>
+      </div>
+      <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/30/Ask_The_Esthetician_676x556-092905-040630.png" alt="">
+        <p>Ask the Esthetician</p>
+        <p>Sign up for personal recommendations on all things beauty from <br>
+        our in-house estheticians.</p>
+      </div>
+      <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/10/1116-STDCRE-43990-CM-DS-Q4-Batching-676x556-063610-034610.jpg" alt="">
+        <p>Serum Superstars</p>
+        <p>The most concentrated products in your skin care arsenal for targeted <br> treatment.</p>
+      </div>
+    </div>    
+      </div>
+    </div>
+  </div>
+    
 </body>
 
 <script>
-    
+    let storage = JSON.parse(localStorage.getItem("MyAPI"))||[];
+
+    let searchButton = document.getElementById("searchbutton");
+
+    let search = document.getElementById("search");
+
+    let page = document.getElementById("body");
+
+    searchButton.addEventListener("click",()=>{
+      page.innerHTML = null;
+      let newStorage = storage.filter((element)=>{
+
+       return (search.value === element.category);
+
+      });
+      display(newStorage);
+      
+    });
+
+      function display(storage){
+
+        // page.innerHTML = null;
+
+        storage.forEach((element)=>{
+
+       let card = document.createElement("div");
+
+       let image = document.createElement("img");
+       image.setAttribute("src", element.image);
+
+       let product = document.createElement("h2");
+       product.innerText = element.product;
+
+       let price = document.createElement("h2");
+       price.innerText = element.price;
+
+       let rating = document.createElement("h2");
+       rating.innerText = element.rating;
+
+       card.append(image,product,price,rating);
+       page.append(card);
+    })
+  }
     let slideIndex = 0;
  showSlides();
 
@@ -308,5 +615,6 @@ a{
    // Change image every 3 seconds
   setTimeout(showSlides, 3000); 
  }
+
 </script>
 </html>
