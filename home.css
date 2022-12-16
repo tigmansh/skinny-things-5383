@@ -1,0 +1,522 @@
+
+*{
+  box-sizing:border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+width:100%;
+position: relative;
+margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+/* width: 100%; */
+text-align:left;
+margin-bottom: 180px;
+margin-left: 875px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text button{
+margin-top: 10px;
+padding: 7px;
+}
+
+.slideshow-container:hover{
+cursor: pointer;
+}
+
+.text2 {
+color:black;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+/* width: 100%; */
+text-align:left;
+margin-bottom: 180px;
+margin-left: 875px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text2 button{
+background-color: black;
+color: white;
+margin-top: 10px;
+padding: 7px;
+}
+
+.text3 {
+color:#f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+/* width: 100%; */
+text-align:left;
+margin-bottom: 180px;
+margin-left: 875px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text3 button{
+width: 30%;
+margin-top: 10px;
+padding: 7px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+animation-name:fade;
+animation-duration: 1.5s;
+}
+@keyframes fade{
+from {opacity: .4}
+to {opacity: 1}
+}
+nav{
+background-color: black;
+width: 100%;
+position: sticky;
+top: 0;
+z-index:999;
+}
+nav img{
+width: 22%;
+margin-left: 10%;
+margin-bottom: 5%;
+}
+#anchorDiv{
+display: flex;
+align-items: center;
+justify-content:space-between;
+margin-left: 10%;
+margin-right: 10%;
+padding-bottom: 2%;
+margin-top: -3%;
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-size: medium;
+}
+
+a{
+text-decoration: none;
+color: #fff;
+}
+#main{
+display: flex;
+}
+#search{
+width: 25%;
+margin-left: 3%;
+margin-bottom: 5%;
+padding: 1%;
+margin-top:2%;
+height: 40px;
+
+}
+#main{
+display: flex;
+}
+
+#main div img{
+width: 10%;
+height: 23%;
+margin-left: 0.5%;
+margin-top: 6%;
+background-color: #fff;
+}
+
+#logout{
+/* display: flex;
+justify-content: center; */
+display: block;
+background-color: transparent;
+color: #fff;
+width: 10%;
+height: 10%;
+position:absolute;
+left: 83%;
+top: 3%;
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-size: large;
+cursor: pointer;
+/* margin-top: 3%; */
+}
+#cart{
+display: block;
+background-color: transparent;
+color: #fff;
+width: 10%;
+height: 10%;
+position:absolute;
+left: 90%;
+top: 3%;
+cursor: pointer;
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-size: large;
+}
+#counter{
+text-align: center;
+color: black;
+position:absolute;
+left: 93%;
+top: 5%;
+cursor: pointer;
+border-radius:20px;
+width: 1%;
+background-color: white;
+}
+
+#casualText{
+text-align: center;
+margin-top: 1%;
+font-size: large;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#off{
+width: 35%;
+height: 60%;
+margin-top: 5%;
+}
+#onn{
+width: 35%;
+height: 437px;
+margin-top: 5%;
+}
+#ddd{
+display: flex;
+justify-content: space-evenly;
+}
+#bigger{
+display: flex;
+}
+.carousel{
+display: flex;
+}
+.carousel img{
+position: absolute;
+left:50%;
+width: 25%;
+height:40%;
+}
+.secondNav{
+display: flex;
+}
+
+#Navsecond{
+display: flex;
+justify-content: space-evenly;
+}
+
+.secondNav p{
+padding-top: 11px;
+}
+#thirdnav{
+text-align: center;
+background-color: grey;
+position: color;
+/* background: 0px 0px; */
+height: 51.9875px;
+width: 1519.2px;
+border: 0px solid #999999;
+padding: 16px 8px 16px 8px;
+cursor: pointer;
+font-size: 14px;
+font-weight: 700;
+line-height: 19.992px;
+text-decoration: none solid rgb(51, 51, 51);
+word-spacing: 0px;
+font-family: "lato regular, Helvetica, Arial";
+}
+
+#shopByCategory{
+text-align: center;
+margin-top: 50px;
+font-size: large;
+height: 100px;
+font-family: "lato regular, Helvetica, Arial";
+}
+
+#shopByCategory2{
+display: flex;
+margin-left: 4%;
+justify-content: space-evenly;
+}
+
+#shopByCategory2 img{
+height: 196px;
+width: 196px;
+}
+
+#afterBestseller{
+display: flex;
+text-align: center;
+justify-content: space-evenly;
+font-family: Arial, Helvetica, sans-serif;
+margin-top: 40px;
+margin-left: 5%;
+}
+
+#afterBestseller img{
+height: 348px;
+width: 423px;
+}
+
+#fb{
+font-family: "Poly Regular", "Times New Roman", serif;
+font-size: 24px;
+line-height: 32px;
+text-decoration: none solid rgb(0, 0, 0);
+text-align: center;
+word-spacing: 0px;
+height: 32px;
+width: 1336px;
+margin: 40px 16px 40px 90px;
+padding: 0 16px 0 16px;
+min-height: auto;
+max-width: 100%;
+min-width: auto;
+display: block;
+}
+#featuredBrands{
+display: flex;
+justify-content: space-evenly;
+height: 272px;
+width: 1400px;
+position: relative;
+margin: 0px 90px 50px 90px;
+align-items: center;
+}
+#featuredBrands :nth-child(1) img{
+height: 53px;
+width: 196px;
+cursor: pointer;
+}
+#featuredBrands :nth-child(2) img{
+height: 20px;
+width: 196px;
+cursor: pointer;
+}
+#featuredBrands :nth-child(3) img{
+height: 196px;
+width: 196px;
+cursor: pointer;
+}
+#featuredBrands :nth-child(4) img{
+height: 20px;
+width: 196px;
+cursor: pointer;
+}
+#featuredBrands :nth-child(5) img{
+height: 85px;
+width: 196px;
+cursor: pointer;
+}
+#featuredBrands :nth-child(6) img{
+height: 80px;
+width: 196px;
+cursor: pointer;
+}
+
+#AfterFeaturedBrands{
+display: flex;
+justify-content: space-evenly;
+margin: 45px 90px 80px 90px;
+}
+#AfterFeaturedBrands div{
+text-align: center;
+font-family: "lato regular, Helvetica, Arial";
+cursor: pointer;
+height: 180px;
+width: 300px;
+text-decoration:underline;
+font-size: 14px;
+font-weight: 500;
+line-height: 20px;
+}
+
+/* footer css from here 👇 */
+
+hr {
+border: 0;
+height: 1px;
+background-color: #333;
+width: 100%;
+}
+#upperPart{
+margin: 45px 90px 0px 90px;
+display:flex;
+justify-content: space-between;
+font-size: large;
+font-family: "lato regular, Helvetica, Arial";
+}
+
+#instagram-round-icon{
+height: 40px;
+width: 40px;
+}
+
+#socialMedia p{
+
+margin-left: -100%;
+}
+#socialMedia{
+margin-top: 20px;
+margin-left: -110%;
+}
+#socialMedia svg{
+margin-right: 10px;
+}
+#socialMedia img{
+margin-right: 10px;
+}
+footer button{
+background-color: #222222;
+border: 0px;
+color: #fff;
+margin-top: 20px;
+padding: 10px 30px;
+cursor: pointer;
+}
+#midPart{
+display: flex;
+margin: 5px 90px 10px 90px;
+justify-content: space-between;
+font-size: large;
+font-family: "lato regular, Helvetica, Arial";
+}
+#mid{
+width: 45%;
+margin: 45px 90px 10px 90px;
+}
+#midPart > div p{
+margin-bottom: 20px;
+}
+#services div{
+display: flex;
+cursor: pointer;
+}
+#services div :hover{
+background-color: rgba(232, 228, 228, 0.92);
+color:black;
+}
+#midPart > div div svg{
+margin-right: 10px;
+}
+
+#midTwo{
+display: flex;
+cursor: pointer;
+}
+#midTwo :nth-child(1){
+margin-right: 50px;
+}
+#midTwo :nth-child(1) :hover{
+    background-color: rgba(232, 228, 228, 0.92);
+}
+#midPart p{
+    margin-top:-10px ;
+    padding: 10px 15px 10px 0px;
+}
+/* #midPart svg{
+    padding: 10px 15px;
+} */
+#midTwo :nth-child(2){
+margin-right: 50px;
+}
+#midTwo :nth-child(2) :hover{
+/* background-color: #bbb; */
+background-color: rgba(232, 228, 228, 0.92);
+}
+#midTwo :nth-child(3) :hover{
+/* background-color: #bbb; */
+background-color: rgba(232, 228, 228, 0.92);
+}
+#midTwo hr{
+margin: -11px 0px 25px 0px;
+}
+#bottomPart{
+display: flex;
+margin: 5px 90px 10px 90px;
+justify-content: space-between;
+font-size: large;
+font-family: "lato regular, Helvetica, Arial";
+}
+#connect-on-social-media p{
+margin-left: -109%;
+}
+#bottomTwo{
+margin-left: 46%;
+cursor: pointer;
+}
+#bottomTwo h4{
+margin-top: 3%;
+margin-bottom: 3%;
+}
