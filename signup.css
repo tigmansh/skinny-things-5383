@@ -1,0 +1,80 @@
+
+/* Form Title */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Label */
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Form Input */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Form Button */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+body{
+  background-image: url("https://i.ibb.co/JdcNMsT/signup1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+form {
+  width: 300px;
+  margin-left:75%;
+  margin-top: 12.5%;
+  padding: 30px;
+  padding-right: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color:#fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:small;
+}
+/* For Medium Screen Size */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  form {
+  width: 250px;
+  margin-left:70%;
+  margin-top: 12.5%;
+  padding: 15px;
+  padding-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color:#fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:small;
+ }
+}
+/* For Small Screen Size */
+@media screen and (min-width: 325px) and (max-width: 767px){
+  form {
+  width: 250px;
+  margin-left:70%;
+  margin-top: 12.5%;
+  padding: 15px;
+  padding-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color:#fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:small;
+  /* opacity: 1; */
+}
+}
