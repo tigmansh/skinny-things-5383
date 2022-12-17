@@ -323,40 +323,5 @@
         </div>
       </footer>
 </body>
-<script>
-    let storage = JSON.parse(localStorage.getItem("newdata"))||[];
-    let page = document.getElementById("body")
-    
-
-// page.innerHTML = null;
-
-storage.forEach((element)=>{
-
-let card = document.createElement("div");
-
-let image = document.createElement("img");
-image.setAttribute("src", element.image);
-
-let product = document.createElement("h2");
-product.innerText = element.product;
-
-let price = document.createElement("h2");
-price.innerText = element.price;
-
-let rating = document.createElement("h2");
-rating.innerText = element.rating;
-
-let button = document.createElement("button");
-button.innerText = "Quick Buy";
-
-button.addEventListener("click",()=>{
-
-    window.location = "/purchasePage.html";
-    
-})
-card.append(image,product,price,rating,button);
-page.append(card);
-})
-
-</script>
+<script src="./searchResult.js"></script>
 </html>
