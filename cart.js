@@ -8,7 +8,7 @@
        function pp(){
         window.location = "./purchasePage.html"
        }
-       
+
     function displayProducts(){
 
       container.innerHTML = null;
@@ -21,8 +21,8 @@
             let product = document.createElement("h2");
            product.innerText = element.product;
 
-          let price = document.createElement("h2");
-          price.innerText = element.price;
+           let price = document.createElement("h3");
+           price.innerText = element.price;
 
             let category = document.createElement("p");
             category.innerText = "Category: "+element.category;
@@ -62,6 +62,7 @@
                displayProducts();
               }
             })
+            
             remove.addEventListener("click",()=>{
               // totalPrice.innerText = +totalPrice.innerText - (element.price * +element.quantity);
               
