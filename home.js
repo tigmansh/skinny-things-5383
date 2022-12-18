@@ -43,7 +43,7 @@
        rating.innerText = element.rating;
 
        let button = document.createElement("button");
-       button.innerText = "Quick Buy";
+       button.innerText = "Add to Cart";
        
        card.append(image,product,price,rating,button);
        page.append(card);

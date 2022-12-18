@@ -21,6 +21,8 @@ rating.innerText = element.rating;
 let button = document.createElement("button");
 button.innerText = "Add To Cart";
 
+let cartStatus = document.createElement("h3");
+
 button.addEventListener("click",()=>
             { 
               let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -35,14 +37,16 @@ button.addEventListener("click",()=>
               }
               if(already==true){
                 alert("Product Already in Cart");
+                // cartStatus.innerText = "Product Already in Cart";
               }
               else{
                 cart.push({...element,quantity:1});
                 counter.innerText++;
                 localStorage.setItem("cart",JSON.stringify(cart));
-                alert("Product Added To Cart");
+                // alert("Product Added To Cart");
+                cartStatus.innerText = "Product Added To Cart";
               }
             })
-card.append(image,product,price,rating,button);
+card.append(image,product,price,rating,button,cartStatus);
 page.append(card);
 })
