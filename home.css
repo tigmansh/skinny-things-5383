@@ -239,7 +239,15 @@ margin-top: 1%;
 font-size: large;
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+#searchbutton{
+    text-align: center;
+    background-color: #fff;
+    width: 3%;
+    margin-left: -3.2%;
+    padding: 0.5% 1% 0.5% 1%;
+    margin-top:2.1%;
+    height: 35px;
+}
 #off{
 width: 35%;
 height: 60%;
