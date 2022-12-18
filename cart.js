@@ -1,9 +1,14 @@
 
        let cart = JSON.parse(localStorage.getItem("cart")) || [];
        let container = document.getElementById("cart-container");
-    
        let totalPrice = document.getElementById("cart-total");
-
+       
+       let checkout = document.getElementById("toPay");
+       checkout.addEventListener("click",pp);
+       function pp(){
+        window.location = "./purchasePage.html"
+       }
+       
     function displayProducts(){
 
       container.innerHTML = null;
@@ -20,7 +25,7 @@
           price.innerText = element.price;
 
             let category = document.createElement("p");
-            category.innerText = "Category:-"+element.category;
+            category.innerText = "Category: "+element.category;
 
             let plus = document.createElement("button");
             plus.innerText = "+";
@@ -66,9 +71,10 @@
               abcd()
             })
           
-            card.append(image,product,price,category,plus,qty,minus,remove);
+            card.append(image,product,price,category,minus,qty,plus,remove);
             container.append(card);
           });
+          container.append(checkout);
         }
         displayProducts();
         
@@ -96,3 +102,55 @@
           totalPrice.innerText = add;
 
         }
+
+        let storage = JSON.parse(localStorage.getItem("MyAPI"))||[];
+
+        let searchButton = document.getElementById("searchbutton");
+    
+        let search = document.getElementById("search");
+    
+        let page = document.getElementById("body");
+        let body = document.getElementById("body2");
+    
+        searchButton.addEventListener("click",()=>{
+          
+          let newStorage = storage.filter((element)=>{
+    
+           return (search.value === element.category);
+    
+          });
+    
+          localStorage.setItem("newdata",JSON.stringify(newStorage));
+          window.location = "/searchResult.html";
+    
+        });
+    
+          function display(storage){
+    
+            // page.innerHTML = null;
+    
+            storage.forEach((element)=>{
+    
+           let card = document.createElement("div");
+    
+           let image = document.createElement("img");
+           image.setAttribute("src", element.image);
+    
+           let product = document.createElement("h2");
+           product.innerText = element.product;
+    
+           let price = document.createElement("h2");
+           price.innerText = element.price;
+    
+           let rating = document.createElement("h2");
+           rating.innerText = element.rating;
+    
+           let button = document.createElement("button");
+           button.innerText = "Add to Cart";
+           
+           card.append(image,product,price,rating,button);
+           page.append(card);
+        })
+      }
+
+
